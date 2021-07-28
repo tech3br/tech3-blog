@@ -19,11 +19,14 @@ const Post: React.FC<{ post: PostProps }> = ({ post }) => {
     <div onClick={() => Router.push("/p/[id]", `/p/${post.id}`)}>
       <h2>{post.title}</h2>
       <small>By {authorName}</small>
-      <ReactMarkdown source={post.content} />
       <style jsx>{`
         div {
-          color: inherit;
           padding: 2rem;
+          background: rgba(0, 0, 0);
+          border: 1px solid rgba(230, 230, 230, 0.5);
+          border-radius: 8px;
+
+          cursor: pointer;
         }
       `}</style>
     </div>
